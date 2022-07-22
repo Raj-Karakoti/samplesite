@@ -1,4 +1,4 @@
-FROM apache2
+FROM apache2:alpine
 WORKDIR /var/www/html/samplesite
 COPY . .
 RUN go get -d -v ./...
