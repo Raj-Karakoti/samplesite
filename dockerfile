@@ -1,0 +1,6 @@
+FROM apache2
+WORKDIR /var/www/html/samplesite
+COPY . .
+RUN go get -d -v ./...
+RUN go install -v ./...
+CMD ["app"]
